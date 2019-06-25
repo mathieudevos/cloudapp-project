@@ -1,0 +1,12 @@
+version: '3'
+services:
+  service1:
+    build: ./service1/
+    volumes:
+      - ./sharedfiles:/service1
+    ports:
+      - "8001:8001"
+  service2:
+    build: ./service2/
+    volumes:
+      - ./sharedfiles:/service2
